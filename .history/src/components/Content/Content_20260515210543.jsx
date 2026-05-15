@@ -1,0 +1,30 @@
+import React from 'react';
+import './Content.scss';
+
+function Content({ weather, formatted, error }) {
+    if (error) {
+        return <div className='error'>{error}</div>
+    }
+    if (!weather) {
+        return <div className='error'>Введите город</div>
+    }
+
+    return (
+        <section className='content'>
+                <>
+                    <div className="location">
+                        <div className="location__city">{weather.name}, {weather?.sys?.country}</div>
+                        <div className="location__date">{formatted}</div>
+                    </div>
+                    <div className="current">
+                        <div className="current__temp">{(weather.main?.temp - 273.15).toFixed(0.1)}<span>°C</span></div>
+                        <div className="current__weather">{weather?.weather?.[0].description}</div>
+                        <div className="current__hi-low">{(weather.main?.temp_min - 273.15).toFixed(0)}°C / {(weather.main?.temp_max - 273.15).toFixed(0.1)}°C</div>
+                    </div>
+                </>
+
+        </section>
+    )
+}
+
+export default Content

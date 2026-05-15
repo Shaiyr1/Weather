@@ -1,0 +1,32 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.6));
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px 15px;
+}
+.wrapper input {
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: rgba(18, 18, 18, 0.4);
+    border-radius: 16px;
+    border-bottom: 3px solid #df8e00;
+    font-size: 20px;
+    font-weight: 300;
+    transition: 0.2s ease-out;
+    color: #eeeeee;
+}
+.wrapper input:focus {
+    background-color: rgba(18, 18, 18, 0.8);
+}

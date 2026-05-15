@@ -1,0 +1,23 @@
+import './Search.scss'
+
+function Search({ onSearch,  query, setQuery }) {
+
+  return (
+    <section className='wrapper'>
+      <input 
+        className='search-box' 
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault(); 
+                onSearch(query)} 
+        } } 
+        type="text"
+        placeholder='Поиск города'
+      />
+    </section>
+  )
+}
+
+export default Search
