@@ -10,9 +10,6 @@ body {
   background-image: url("    https://images3.alphacoders.com/109/1091500.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 code {
